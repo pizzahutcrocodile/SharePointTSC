@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>SharePoint Tutorials!</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="sp/css/style.css" rel="stylesheet" type="text/css" />
+ 
+  <link rel="stylesheet" href="sp/css/dropdown.css">
+ 
+  <link 
+   href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" 
+   rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="item1">
+      <header>
+        <h1 id="nav-title"><a href="index.html">SharePoint</a></h1>
+        <nav>
+          <ul class = "space">
+            <li> <button class="btn" id="btn">
+                Manage Access to Folders
+
+                <i class="bx bx-chevron-down" id="arrow"></i>
+              </button>
+              <div class="dropdown" id="dropdown">
+                <a href="sp/access.html">
+                  <i class="bx bx-group"></i>
+                  Remove a Group
+                </a>
+                <a href="sp/add.html">
+                  <i class="bx bxs-group"></i>
+                 Add a Group
+                </a>
+              
+              </div></li>
+      <!-- ------------------------------------------------      -->
+            <li> <button class="btn" id="btnn">
+              Permissions
+
+              <i class="bx bx-chevron-down" id="arroww"></i>
+            </button>
+            <div class="dropdown" id="dropdownn">
+              <a href="sp/grantperm.html">
+                <i class="bx bx-user-check"></i>
+                Grant Permissions
+              </a>
+              <a href="sp/permlevel.html">
+                <i class="bx bx-lock"></i>
+               Permission Level
+              </a>
+              <a href="sp/doclib.html">
+                <i class="bx bx-folder"></i>
+                Document Library
+              </a>
+              <a href="sp/CreateGroup.html">
+                <i class="bx bx-user"></i>
+                Create Group
+              </a>
+            </div></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+  
+ 
+    <!-- ------------------------------------------------------- -->
+    <div class="item3">
+      <div>
+        <h1>Inheritance Tutorial</h1>
+        <p>
+          First, you must think about how your folders are related to one another but also keep in mind to group them based on Permission Groups.
+           </p>
+        <p>
+          In SharePoint, access to websites, lists, folders, and list items is controlled through a role-based membership system by which users are assigned to roles that authorize their access to SharePoint objects.
+          </p>
+        <p>
+          In the list below, you will see the Permission Level name and right below that a list of authorization powers. For example, in the sixth number of the list the Permission Level "Read" grants the authority to view pages and list items and download documents to whatever Permission Group Read is assigned to.
+          </p>
+        <p>
+          SharePoint has Default Permission Levels:
+          <ol>
+            <li>Full Control</li>
+            <ul>
+              <li class = "tab">Has Full Control</li>
+            </ul>
+            <li>Design</li>
+            <ul>
+              <li class = "tab">Can view, add, update, delete, approve, and customize.</li>
+            </ul>
+            <li>Edit</li>
+            <ul>
+              <li class = "tab">Can add, edit and delete lists; can view, add, update and delete </li>
+            </ul>
+            <li>Contribute</li>
+            <ul>
+              <li class = "tab">Can view, add, update, and delete list items and documents.</li>
+            </ul>
+            <li>Review</li>
+            <ul>
+              <li class = "tab"> Can view and review list items and documents</li>
+            </ul>
+            <li>Read</li>
+            <ul>
+              <li class = "tab">Can view pages and list items and download documents.</li>
+            </ul>
+          </ol>
+        
+        </p>
+        <p>
+          Authority is added to Permission Levels and Permission Levels are added to Permission Groups and Permission Groups are added to Folders. 
+        </p>
+        <p>
+          All folders and files inside of the Parent folder will inherit the permission group, these folders are called Child folders. 
+        </p>
+     <p>
+       For example, if all the folders are put inside a "Site Folder" and the Site Folder is assigned the "Read Only" permission group, that was assigned "Read" permission level, which means that all members inside of the Read Only group are authorized to view, list items and download documents as it is stated on the list above, it means that all folders inside of the "Site" folder (child folders) inherit the Read Only permission group.
+     </p>
+        <p>
+          Inside of the "Site Folder" there could be other folders that could be assigned more exclusive permission groups with permission levels like "Contributor." There might be an instance that a file or folder holds sensitive information that needs to be excluded from the Read Only Permission Group, then one must manually stop the inheritance in said folder (see <span ><a href="sp/access.html" class = "link" target="_blank">"Remove a Group"</a></span>). This can be done to all permission groups excluding the ones with the permission level of "Full Control".
+        </p>
+        <p>
+          A single user can belong to multiple groups. For example, if Sam is in both Read only and Contribute group, which has contribute level Permissions, and a folder has given both groups access then Juan is going to be given authority from both groups.
+        </p>
+        <p>
+          Because of this the initial Folder, which in this case is called "Team Site", usually has the permission level of Read. It is good practice to put all users in a group with Read Permission Level since it is the least confidential. The more exclusive Permission Groups should be more selective in who gets granted membership.
+        </p>
+        <p>
+          Let's say there are three Users named Juan, Sam and Jerry. Juan belongs to the Read Only Group, Sam belongs to the Contribute Group and Read Only Group, and Jerry is a member of the Owner Group, which has Full Control permission level.
+        </p>
+        <p>
+          Juan belongs to Team A, Sam to Team B and Jerry is the manager. Jerry wants to stop Juan from reading files in Team B and Sam From Reading files from Team A. Due to "Inheritance" all subsequent folders and files inherit permission levels from the Parent folder which is the Read Only permission group.
+        </p>
+        <p>
+          Jerry has to go to the Folders themselves and manually remove the Read only Permission Group and add a custom Permission Group made for Team A and Team B. Jerry named them Team A and Team B for clarity. Those Permission Groups are given Read permission Level and that's it.
+        </p>
+        <p>
+          Jerry then has to add the "Contribute Permission Group" to the Team B Folder (see <span><a href="sp/add.html" class = "link" target="_blank">"Add a Group"</a></span>) so Sam can have Contribute level permission. Since Jerry added Contribute Permission Group to Team B all subsequent folders and files inherits Contribute Level Permissions. Because Jerry has Full Control Permission Level he can always see and edit what he likes regardless of the Permission Group explicitly added to the folder.
+        </p>
+        <p>
+          Because Juan is in the Read Only Group and Team A Group and not in the contribute permission group like Sam he can't add, update or delete like she can and even if he was Jerry has not added the Contribute Group to the Team A folder so Contribute Group is not allowed on to the Team A folder.
+        </p>
+        <p>
+          Please take a look at the flow chart just below to see if you can follow the inheritance between parent and child folders.
+        </p>
+        
+      </div>
+      <div>
+         <img src="sp/images/inheritance_1.png" alt="">
+       </div>
+      
+    
+    </div>
+    
+
+ <!-- --------------------------------------------------      -->
+      
+
+    
+
+
+  <script src="sp/Javascript/script.js"></script>
+  <script src="sp/Javascript/script_2.js"></script>
+</body>
+
+</html>
