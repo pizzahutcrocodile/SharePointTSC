@@ -29,11 +29,15 @@ h1{
   margin-bottom: 2em;
 }
 
-.link{
-  color: #f58220;
+.link {
+  color: #004270;
   text-decoration: none;
+  text-shadow: 1px 1px 2px black;
 }
 
+.link:hover {
+  text-decoration: underline;
+}
 ol > li{
   text-align: left;
   line-height:2em;
