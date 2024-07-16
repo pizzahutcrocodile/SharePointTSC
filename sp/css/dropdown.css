@@ -14,8 +14,8 @@
 
 body {
   margin: 2rem;
-  background-image: linear-gradient(to right, rgb(0, 66, 112, 0.3)
- , rgb(245, 130, 32, 0.3));
+/*   background-image: linear-gradient(to right, rgb(0, 66, 112, 0.3)
+ , rgb(245, 130, 32, 0.3)); */
   font-size: 0.9rem;
   color: black;
 }
