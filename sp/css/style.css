@@ -117,6 +117,11 @@ flex: 1;
   grid-area: footer;
 }
 
+.footer{
+  object-fit: fill;
+  width: auto;
+}
+
 .grid-container {
   height: 100vh;
   display: grid;
