@@ -118,8 +118,9 @@ flex: 1;
 }
 
 .footer{
-  object-fit: fill;
-  width: auto;
+  padding: 0;
+  width:100vw;
+  margin: 0;
 }
 
 .grid-container {
