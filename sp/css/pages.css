@@ -160,7 +160,7 @@ header a {
   color: #555;
   transition: all 0.3s ease 0s;
   font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
+  font-size: 1.2em;
   font-style: normal;
 }
 
