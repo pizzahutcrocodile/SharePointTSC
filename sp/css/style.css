@@ -15,14 +15,12 @@ html {
   #nav-title{
     margin: auto;
 }
-p{
-  font-style: normal;
-}
 }
 P {
   text-align: left;
 
-    font-family: "Permanent Marker", cursive;
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
   margin-bottom: 2em;
