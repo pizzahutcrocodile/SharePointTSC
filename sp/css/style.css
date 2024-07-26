@@ -14,7 +14,9 @@ html {
   }
   #nav-title{
     margin: auto;
-
+}
+p{
+  font-style: normal;
 }
 }
 P {
